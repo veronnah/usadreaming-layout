@@ -1,0 +1,412 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/*font-family: 'Lobster', sans-serif;*/
+	font-family: 'Liu Jian Mao Cao', cursive;
+	
+}
+.background{
+	position: relative;
+	background-image: url('../gollivud_gory_los_andzheles.jpg');
+	background-repeat: no-repeat;
+	height: 100vh;
+	background-size: cover;
+	/*filter: blur(4px);*/
+	z-index: 3;
+}
+.background:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0; 
+	background: rgba(108, 90, 76, .2);
+  	z-index: 1;
+
+}
+
+.text{
+
+	color: white;
+	text-shadow:1px 2px 10px rgb(54, 33, 45);
+	text-align: center;
+	justify-content: center;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	z-index: 3;
+	line-height: 3.3em;
+	top: 47px;
+
+	
+}
+.text h1{
+	font-size: 80px;
+	/*color: rgb(0, 89, 98);*/
+	/*text-shadow: 1px 2px 10px rgb(195, 137, 94);*/
+	
+
+}
+.text h3{
+	font-size: 28px;
+	display: flex;
+	justify-content: center;
+
+	/*color: rgb(43, 79, 88);*/
+	
+	/*text-shadow: 1px 2px 10px rgb(54, 36, 39);*/
+}
+.places{
+
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 80px;
+	z-index: 3;
+
+	
+
+}
+
+.places img {
+	max-width: 100%;
+	display: block;
+
+
+
+}
+.places li{
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	padding: .5em;
+
+}
+.place{
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	box-shadow: 1px 2px 10px #fff;
+}
+.place:hover{
+	box-shadow: 1px 2px 10px #FFFA6F;
+}
+
+.descr {
+	font-size: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: white;
+	text-align: center;
+	padding-top: 80px;
+	background-color: rgba(0, 0, 0, .4);
+	overflow: hidden;
+	opacity: 0;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+	
+}
+.places li:hover .descr {
+	display: block;
+	opacity: 1;
+}
+/*DIalog1*/
+.modal{
+	display: flex;
+	display: none;
+	/*margin: 0;*/
+	/*padding: 0;*/
+	background: rgba(204, 165, 199);
+	position: absolute;
+	box-shadow: 0 0 30px rgb(68, 47, 58) ;
+	border: none;
+	margin-left: 153px;
+	margin-top: 100px;
+	width: 80%;
+	height: 77%;
+	position: fixed;
+	z-index: 9999999;
+    /*left: 50%;*/
+    /*top: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    border-radius: 20px;
+    animation-name: modal;
+    animation-duration: .6s;
+
+
+}
+.modal-header{
+	display: flex;
+	justify-content: flex-end;
+}
+.modal-body{
+	margin-left: 30px;
+	}
+
+#imges:hover{
+	cursor: pointer;
+	-webkit-transform: scale(0.7);
+  	-ms-transform: scale(0.8);
+ 	 transform: scale(0.9);
+}
+
+.pls{
+	font-size: 30px;
+	color: rgb(76, 66, 66);
+	margin: 5px;
+	margin-left: 80px;
+}
+.disney{
+	/*border: 3px groove rgb(109, 6, 13);*/
+	width: 200px;
+}
+.holl{
+	width: 250px;
+}
+.uni{
+	width: 440px;
+}
+.bev{
+	width: 250px;
+
+}
+.miami{
+	width: 250px;
+	margin-right: 19px;
+	margin-left: 1px;
+}
+.miami1{
+	width: 300px;
+	margin-right: 19px;
+}
+.miami2{
+	width: 300px;
+	margin-right: 19px;
+}
+.miami3{
+	width: 300px;
+}
+.nyc1{
+	width: 250px;
+	margin-left: 1px;
+	margin-right: 34px;
+}
+.nyc2{
+	width: 300px;
+	margin-right: 38px;
+}
+.nyc3{
+	width: 300px;
+	margin-right: 34px;
+}
+.nyc4{
+	width: 250px;
+
+}
+.nycc{
+	margin-top: 45px;
+}
+.seattle1{
+	width: 250px;
+	margin-left: 1px;
+	margin-right: 34px;
+}
+.seattle2{
+	width: 300px;
+	margin-right: 38px;
+}
+.seattle3{
+	width: 300px;
+	margin-right: 34px;
+}
+.seattle4{
+	width: 250px;
+
+}
+.modal-wrapper{
+	width: 100%; 
+}
+.circle{
+	text-align: center;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;	
+    height: 2em;
+    background-color: rgba(201, 4, 3);
+    border-radius: 30px;
+}
+.close{
+	font-family: Arial, bold;
+	margin-top:  0;
+	cursor: pointer;
+	font-size: 40px;
+	overflow: hidden;
+	color: rgba(254, 200, 186);
+}
+@keyframes modal {
+  from {top: -100px; opacity: 0;}
+  to {top: 0px; opacity: 1;}
+}
+/*DIalog1*/
+.modal1{
+	display: flex;
+	display: none;
+	background: rgba(232, 191, 184);
+	position: absolute;
+	box-shadow: 0 0 30px rgb(68, 47, 58) ;
+	border: none;
+	margin-left: 153px;
+	margin-top: 100px;
+	width: 80%;
+	height: 77%;
+	position: fixed;
+	z-index: 9999999;
+    border-radius: 20px;
+    animation-name: modal;
+    animation-duration: .6s;
+}
+.modal-header1{
+	display: flex;
+	justify-content: flex-end;
+}
+.modal-wrapper1{
+	width: 100%; 
+}
+.circle1{
+	text-align: center;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;	
+    height: 2em;
+    background-color: rgba(201, 4, 3);
+    border-radius: 30px;
+}
+.close1{
+	font-family: Arial, bold;
+	margin-top:  0;
+	cursor: pointer;
+	font-size: 40px;
+	overflow: hidden;
+	color: rgba(254, 200, 186);
+}
+@keyframes modal1{
+  from {top: -100px; opacity: 0;}
+  to {top: 0px; opacity: 1;}
+}
+/*DIalog2*/
+.modal2{
+	display: flex;
+	display: none;
+	background: rgba(255, 205, 158);
+	position: absolute;
+	box-shadow: 0 0 30px rgb(68, 47, 58) ;
+	border: none;
+	margin-left: 153px;
+	margin-top: 100px;
+	width: 80%;
+	height: 77%;
+	position: fixed;
+	z-index: 9999999;
+    border-radius: 20px;
+    animation-name: modal;
+    animation-duration: .6s;
+}
+.modal-header2{
+	display: flex;
+	justify-content: flex-end;
+}
+.modal-wrapper2{
+	width: 100%; 
+}
+.circle2{
+	text-align: center;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;	
+    height: 2em;
+    background-color: rgba(201, 4, 3);
+    border-radius: 30px;
+
+}
+.close2{
+	font-family: Arial, bold;
+	margin-top:  0;
+	cursor: pointer;
+	font-size: 40px;
+	overflow: hidden;
+	color: rgba(254, 200, 186);
+}
+@keyframes modal2{
+  from {top: -100px; opacity: 0;}
+  to {top: 0px; opacity: 1;}
+}
+/*DIalog3*/	
+.modal3{
+	display: flex;
+	display: none;
+	/*background: rgba(119, 153, 188);*/
+	background: rgba(173, 172, 187);
+	position: absolute;
+	box-shadow: 0 0 30px rgb(68, 47, 58) ;
+	border: none;
+	margin-left: 153px;
+	margin-top: 100px;
+	width: 80%;
+	height: 77%;
+	position: fixed;
+	z-index: 9999999;
+    border-radius: 20px;
+    animation-name: modal;
+    animation-duration: .6s;
+}
+.modal-header3{
+	display: flex;
+	justify-content: flex-end;
+}
+.modal-wrapper3{
+	width: 100%; 
+}
+.circle3{
+	text-align: center;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;	
+    height: 2em;
+    background-color: rgba(201, 4, 3);
+    border-radius: 30px;
+}
+.close3{
+	font-family: Arial, bold;
+	margin-top:  0;
+	cursor: pointer;
+	font-size: 40px;
+	overflow: hidden;
+	color: rgba(254, 200, 186);
+}
+@keyframes modal3{
+  from {top: -100px; opacity: 0;}
+  to {top: 0px; opacity: 1;}
+}
